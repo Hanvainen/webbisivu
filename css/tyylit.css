@@ -1,0 +1,93 @@
+* {
+     box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: #F5F0E6;
+    color: #292522;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 16px;
+    line-height: 1.7;
+
+}
+
+/*Yleiset tekstityylit*/
+h1 {
+    font-family: 'Great Vibes', cursive;
+    color: #292522;
+    font-size: 50px;
+}
+/*pohdi vielä jatkossa että löytyisikö palatino linotypen tilalle jokin parempi fontti, esim. google fonteista.*/
+h2, h3 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    color: #292522;
+    font-size: 30px;
+}
+
+p {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    color: #292522;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Linkit */
+a {
+    color: #C4873B;
+    text-decoration: none;
+}
+a:hover {
+    color: #C4873B;
+    text-decoration: underline;
+}
+
+/*header-tyylit*/
+/*pohdi jatkossa, onko järkevämpää muuttaa header niin, että nimi ja navigaatio olisivat rinnakkain samalla rivillä ja muut teskstit nimen alla. (flexboxilla?)*/  
+/*pohdi myös jatkossa taustavärin tai fontin vaihtamista vielä erilaiseen luettavuuden parantamiseksi.(luettavuus vaihtelee nyt eri näytöiltä katsottaessa)*/
+header {
+    background-color: #72263af6;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigaatiopalkki */
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+main {
+    padding: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Biografian vuosiluvut */
+.vuosi {
+    font-size: 18px;
+    color: #C4873B;
+}
+/*Luo tähän myöhemmin biografian taulukko*/
+
+/* Gallerian tyylit - odottaa kuvia */
+.galleria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Yhteystiedot-sivun tyylit */
+/*luo tähän myöhemmin yhteystietolomake*/
+
+/*Footer-tyylit*/
+footer {
+    background-color: #72263af6;
+    color: #fff;
+    text-align: center;
+    padding: 2px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
