@@ -3,7 +3,7 @@
 }
 body {
     margin: 0;
-    background-color: #F5F0E6;
+    background-color: #f5f0e6;
     color: #292522;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-size: 16px;
@@ -14,20 +14,37 @@ body {
 /*Yleiset tekstityylit*/
 h1 {
     font-family: 'Great Vibes', cursive;
-    color: #292522;
+    color: #ebdabb;
     font-size: 50px;
+}
+.header{
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+    color: #ebdabb;
+    font-size: 20px;
+}
+
+.footer{
+    font-family: "Cormorant Garamond", Georgia, serif;
+    color: #ebdabb;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 500;
 }
 /*pohdi vielä jatkossa että löytyisikö palatino linotypen tilalle jokin parempi fontti, esim. google fonteista.*/
 h2, h3 {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500;
     color: #292522;
     font-size: 30px;
 }
 
 p {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 700;
     color: #292522;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.7;
 }
 
@@ -43,7 +60,6 @@ a:hover {
 
 /*header-tyylit*/
 /*pohdi jatkossa, onko järkevämpää muuttaa header niin, että nimi ja navigaatio olisivat rinnakkain samalla rivillä ja muut teskstit nimen alla. (flexboxilla?)*/  
-/*pohdi myös jatkossa taustavärin tai fontin vaihtamista vielä erilaiseen luettavuuden parantamiseksi.(luettavuus vaihtelee nyt eri näytöiltä katsottaessa)*/
 header {
     background-color: #72263af6;
     padding: 20px;
@@ -71,11 +87,20 @@ main {
 }
 /*Luo tähän myöhemmin biografian taulukko*/
 
-/* Gallerian tyylit - odottaa kuvia */
-.galleria {
+/* Gallerian tyylit */
+.galleria-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
+}
+
+.galleria-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+
+    border: 2px solid #C4873B;
+    border-radius: 5px;
 }
 
 /* Yhteystiedot-sivun tyylit */
