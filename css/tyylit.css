@@ -160,23 +160,50 @@ main {
 /* Gallerian tyylit */
 .galleria-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-}
-
-.galleria-grid img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-
-    border: 2px solid #C4873B;
-    border-radius: 5px;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .galleria-kuva {
     position: relative;
     margin: 0;
     overflow: hidden;
+    min-width: 0;
+}
+.galleria-kuva img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border: 2px solid #C4873B;
+    border-radius: 5px;
+}
+
+.pieni{
+    grid-column: span 2;
+    height: 500px;
+}
+
+.suuri{
+    grid-column: span 4;
+    height: 500px;
+}
+
+.levea{
+    grid-column: span 6;
+    height: 600px;
+}
+
+.ala{
+    grid-column: span 2;
+    height: 300px;
+}
+
+.kuvapositio-alas{
+    object-position: center 70%;
 }
 
 .galleria-kuva figcaption {
@@ -200,6 +227,52 @@ main {
     opacity: 1;
 }
 
+.galleria-video {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.galleria-video video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.video-video {
+    flex: 1;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 2px solid #C4873B;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #72263A;
+    color: #F5F0E6;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 300;
+    font-size: 17px;
+}
+
+.video-linkit {
+    flex: 1;
+    text-align: center;
+    border: 2px solid #C4873B;
+    border-radius: 5px;
+    background-color: #72263A;
+    color: #F5F0E6;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 300;
+    font-size: 20px;
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
 /* Yhteystiedot-sivun tyylit */
 .yhteystiedot {
     display: flex;
@@ -211,11 +284,11 @@ main {
     padding: 20px;
 }
 
-.yhteystiedot h2{
+.yhteystiedot h2 {
     color: #72263A;
     font-family: "Cormorant Garamond", Georgia, serif;
     font-weight: 500;
-    margin-top: 0;
+    margin-top: 5px;
     padding-bottom: 10px;
     border-bottom: 1px solid #C4873B;
 }
@@ -236,7 +309,6 @@ main {
     border-radius: 12px;
     border: 1px solid #E8DFD1;
     box-shadow: 0 5px 18px rgba(41, 37, 34, 0.08);
-    border-radius: 8px;
 }
 
 /*luo tähän myöhemmin yhteystietolomake*/
@@ -251,3 +323,4 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
